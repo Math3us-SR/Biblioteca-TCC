@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Biblioteca Online</title>
+  <link rel="stylesheet" a href="index.css">
+  <link rel="shortcut icon" href="img/FAVICON-Photoroom.ico" type="image/x-icon">
+  <style>
+    /* DEFINIÇÃO DAS CORES */
+    :root {
+      --chocolate: #342519;
+      --chocolate-branco: #ede6d9;
+    }
+
+    /* FORMATAÇÃO GERAL */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* FORMATAÇÃO DO FUNDO E DO TAMANHO DO FUNDO */
+    footer {
+      background-color: var(--chocolate-branco);
+      padding: 30px 20px;
+    }
+
+    /* FORMATAÇÃO GERAL DA COLUNA */
+    #footer_content {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* FORMATAÇÃO DO TAMANHO DA LOGO */
+    #footer_logo p {
+      font-size: 16px;
+      margin-top: 1px;
+    }
+
+    /* FORMATAÇÃO GERAL DA LISTA */
+    .footer_list {
+      list-style: none;
+      padding: 0;
+    }
+
+    /* FORMATAÇÃO DO TÍTULO DAS COLUNAS */
+    .footer_list h3 {
+      margin-bottom: 10px;
+      color: var(--chocolate);
+    }
+
+    /* FORMATAÇÃO DAS CLASSES */
+    .footer_link {
+      text-decoration: none;
+      color: var(--chocolate);
+      display: block;
+      margin: 5px 0;
+      transition: color 0.3s, text-decoration 0.3s;
+    }
+
+    /* FORMATAÇÃO DA MUDANÇA DE COR DAS CLASSES */
+    .footer_link:hover {
+      color: var(--chocolate);
+      text-decoration: underline;
+    }
+
+    /* FORMATAÇÃO DA LOGO DO INSTAGRAM */
+    #footer_instagram a {
+      font-size: 20px;
+      display: flex;
+      align-items: center; 
+      gap: 6px; 
+      color: var(--chocolate);
+      transition: transform 0.3s;
+      text-decoration: none;
+    }
+
+    /* TAMANHO DO ÍCONE DO INSTAGRAM */
+    #footer_instagram i {
+      font-size: 25px;
+      margin-top: 0;
+    }
+
+    /* FORMATAÇÃO DA MUDANÇA DE COR E TAMANHO DO INSTAGRAM */
+    #footer_instagram a:hover {
+      transform: scale(1.2);
+      color: var(--chocolate);
+    }
+
+    /* FORMATAÇÃO GERAL DAS BARRAS VERTICAIS */
+    .footer_column {
+      padding: 0 20px;
+      border-left: 1px solid var(--chocolate);
+    }
+
+    /* REMOVE A BARRA DA PRIMEIRA COLUNA */
+    .footer_column:first-child {
+      border-left: none;
+    }
+
+    /* TAMANHO DA LOGO */
+    #footer_logo img {
+      max-width: 200px;
+      height: auto;
+      margin-top: 20px;
+      margin-bottom: 1px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="img/logo_header.png" alt="Logo da Biblioteca" height="80">
+    </div>      
+  
+    <div class="icons" id="iconContainer">
+      <span class="catalogo-menu" id="catalogoTexto">CATÁLOGO</span>
+      <div class="icon" onclick="abrirPesquisa()"><img src="img/lupa.png" height="20"></div>
+      <div class="search-bar" id="barra-pesquisa">
+        <input type="text" placeholder="Pesquisar livros...">
+      </div>
+      <div class="icon">
+  <a href="Login.html">
+    <img src="img/foto_perfil.png" height="40" alt="Perfil">
+  </a>
+</div>
+
+    </div>
+  </header>
+  
+
+    <p>Bem vindo à biblioteca EVF!</p>
+  </div>
+
+
+<div class="banner">
+  <div class="banner-content"></div>
+  <div class="bolinhas">
+    <span class="ativa"></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+
+
+<section class="catalogo">
+  <h2>CATÁLOGO</h2>
+  <div class="destaque"></div>
+  <div class="livros">
+    <div class="livro"></div>
+    <div class="livro"></div>
+    <div class="livro"></div>
+  </div>
+</section>
+
+
+<footer>
+  <div id="footer_content">
+    <!-- PRIMEIRA COLUNA -->
+    <div id="footer_logo" class="footer_column">
+      <img src="img/logo.png" />
+      <p>Nos siga no instagram!</p>
+      <div id="footer_instagram">
+        <a href="https://www.instagram.com/bibliotech_e.v.f/" id="instagram">
+          <i class="fa-brands fa-instagram"></i>
+          @bibliotech_e.v.f
+        </a>
+      </div>
+    </div>
+
+    <!-- SEGUNDA COLUNA -->
+    <ul class="footer_list footer_column">
+      <li><h3>Fale conosco</h3></li>
+      <li><a href="#" class="footer_link">Fale conosco</a></li>
+      <li><a href="#" class="footer_link">Feedback</a></li>
+    </ul>
+
+    <!-- TERCEIRA COLUNA -->
+    <ul class="footer_list footer_column">
+      <li><h3>Recursos</h3></li>
+      <li><a href="#" class="footer_link">Página inicial</a></li>
+      <li><a href="#" class="footer_link">Catálogo</a></li>
+    </ul>
+
+    <!-- QUARTA COLUNA -->
+    <ul class="footer_list footer_column">
+      <li><h3>Conta</h3></li>
+      <li><a href="#" class="footer_link">Gerenciamento de Conta</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+  <script>
+  function abrirPesquisa() {
+    const icons = document.getElementById("iconContainer");
+    const barra = document.getElementById("barra-pesquisa");
+
+    if (!icons.classList.contains("ativo")) {
+      icons.classList.add("ativo");
+      setTimeout(() => {
+        barra.style.display = "flex";
+      }, 300);
+    } else {
+      barra.style.display = "none";
+      icons.classList.remove("ativo");
+    }
+  }
+
+
+  
+
+    function verificarLogin() {
+      const logado = false; 
+      if (!logado) {
+        window.location.href = "indexLogin  .html";
+      } else {
+        alert("Você já está logado!");
+      }
+    }
+
+    function irPara(pagina) {
+      alert("Indo para a página: " + pagina);
+    }
+  </script>
+
+</body>
+</html>

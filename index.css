@@ -1,0 +1,143 @@
+/* ---------- Geral ---------- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Cabeçalho ---------- */
+header {
+  background-color: #ede6d9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Container dos ícones e interações */
+.icons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+/* Texto "CATÁLOGO" */
+.catalogo-menu {
+  font-weight: bold;
+  font-size: 16px;
+  color: #3e2e1e;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+/* Ícones (lupa, perfil) */
+.icon {
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/* Barra de pesquisa (inicialmente oculta) */
+.search-bar {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  margin-left: 0;
+  transition: all 0.5s ease;
+}
+
+.search-bar input {
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+/* ---------- Estado Ativo ---------- */
+.icons.ativo #catalogoTexto {
+  transform: translateX(-120px);
+}
+
+.icons.ativo .search-bar {
+  opacity: 1;
+  max-width: 200px;
+  margin-left: 10px;
+}
+
+/* ---------- Conteúdo ---------- */
+.conteudo {
+  margin-left: 170px;
+  padding: 20px;
+}
+
+
+/* ---------- Banner ---------- */
+.banner {
+  background: #ede6d9;
+  margin: 20px;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 60px;
+  position: relative;
+}
+
+.bolinhas {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+}
+
+.bolinhas span {
+  height: 10px;
+  width: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.bolinhas .ativa {
+  background: #3e2e1e;
+}
+
+/* ---------- Catálogo ---------- */
+.catalogo {
+  padding: 20px;
+}
+
+.catalogo h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #3e2e1e;
+}
+
+.destaque {
+  background: #ede6d9;
+  height: 150px;
+  margin-top: 10px;
+  border: 2px solid black;
+  border-top-right-radius: 40px;
+}
+
+.livros {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.livro {
+  flex: 1;
+  background: #ede6d9;
+  height: 120px;
+  border: 2px solid black;
+  border-radius: 15px;
+}
