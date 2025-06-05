@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        font-family: sans-serif;
+        box-sizing: border-box;
+
+      }
+
+      body{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #ffffff;
+      }
+
+      section{
+          display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px 45px;
+        background: #ede6d9;
+        width: 500px;
+     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+        background:  linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgb(255, 255, 255, 0.1));
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px slig rgba(255,255,0.18);
+        border-radius: 32px;
+      }
+
+      section h2{
+        color: black;
+        font-size: 2.5rem;
+        margin: 2.5rem;
+      }
+
+      section form{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      form label{
+        color: #ffffff;
+        font-size: 17px;
+        margin-bottom: 4px;
+      }
+
+      form input{
+        padding: 15px;
+        outline: none;
+        border: 0;
+        margin-bottom: 20px;
+        font-size: 15px;
+        transition: all 0.5s;
+      }
+
+   form input:focus{
+    border-radius: 16px; 
+   }
+    </style>
+</head>
+<body>
+  <section>
+    <h2>
+        Fale conosco
+    </h2>
+    <form action="https://api.staticforms.xyz/submit" method="post"> </form>
+    <label> nome </label>
+<input type="text" name="name" placeholder="Digite seu RM">
+<input type="text" name="Email"placeholder="Digite seu Email">
+<label> mensagem </label>
+<textarea name="mensagem" cold="30" rows="10" placeholder="Digite sua mensagem"> </textarea>
+<button type="submit"> Enviar </button>
+
+<input type="hidden" name="acessKey" value="sf_92ak7b137a1k5ekg4li350n9"> 
+ <input type="hidden" name="redirectTo" value="http://127.0.0.1:5500/Biblioteca-TCC/index.html">
+  </section>   
+</body>
+</html>
