@@ -38,7 +38,7 @@ header {
 }
 
 /* Ícones (lupa, perfil) */
-.icon {
+#icon {
   cursor: pointer;
   font-size: 20px;
 }
